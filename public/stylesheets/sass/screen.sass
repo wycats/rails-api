@@ -1,0 +1,200 @@
+@import compass/reset
+
+@import compass/css3/box-shadow
+@import compass/css3/text-shadow
+@import compass/css3/border-radius
+@import compass/css3/box-sizing
+@import compass/css3/gradient
+@import compass/css3/text-shadow
+
+@mixin flexbox($direction, $align: center)
+  display: -webkit-box
+  display: -moz-box
+  -webkit-box-orient: $direction
+  -moz-box-orient: $direction
+  -webkit-box-align: $align
+  -moz-box-align: $align
+
+@mixin distribute-children($distribute)
+  -webkit-box-pack: $distribute
+  -moz-box-pack: $distribute
+
+@mixin liquid($size: 1)
+  -webkit-box-flex: $size
+  -moz-box-flex: $size
+
+html
+  font-family: Helvetica, sans-serif
+
+html, body, #page
+  height: 100%
+  overflow: hidden
+
+#page
+  +flexbox(horizontal, top)
+  overflow: hidden
+
+#tree, #methods, #details
+  padding: 10px
+
+#tree
+  padding: 0
+  background-color: #e8e8e8
+  border-right: 1px solid #979797
+  overflow: auto
+  width: 200px
+  h1
+    font-size: 12px
+    background: url("/images/the_gradient.gif")
+    padding: 9px 5px 8px
+    border-bottom: 1px solid #979797
+    font-weight: bold
+    text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px
+    color: #666
+  > ul
+    padding: 10px
+  li
+    font-size: 12px
+    line-height: 12px
+    color: #333
+    cursor: pointer
+    &.active
+      > a
+        font-weight: bold
+    span.icon
+      position: relative
+      top: -3px
+      display: inline-block
+      background: url("/images/folder.png") no-repeat
+      width: 16px
+      height: 20px
+      margin-right: 5px
+      &.open
+        background: url("/images/open_folder.png") no-repeat
+      &.file
+        background: url("/images/ruby_file.png") no-repeat
+    li
+      padding-left: 22px
+  a
+    color: inherit
+    text-decoration: none
+
+#methods
+  width: 275px
+  background-color: #fff
+  overflow-y: scroll
+  overflow-x: hidden
+  +flexbox(vertical, top)
+  #buttons
+    +flexbox(horizontal, top)
+    +distribute-children(center)
+    margin-bottom: 20px
+    .button
+      font-size: 14px
+      font-weight: bold
+      color: #444
+      border: 1px solid #666
+      height: 14px
+      background-image: url("/images/button_bg.png")
+      padding: 6px
+      text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px
+      cursor: pointer
+      &.alphabetical
+        +border-left-radius(3px)
+        border-right: 0
+      &.purpose
+        +border-right-radius(3px)
+      &.active
+        background-position: 0 -33px
+  h1
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: bold
+    color: #a2b5ce
+    margin-bottom: 10px
+  .method-list
+    font-size: 12px
+    li
+      color: #333
+      margin-bottom: 4px
+      background: url("/images/info.png") no-repeat
+      padding: 2px 5px 5px 20px
+      cursor: pointer
+      a
+        text-decoration: none
+        color: inherit
+        &.current
+          font-weight: bold
+    + .method-list
+      margin-top: 20px
+    strong
+      font-weight: bold
+
+#details
+  padding: 20px
+  overflow-y: auto
+  +flexbox(vertical, top)
+  +liquid
+
+  tt, code
+    font-family: monospace
+    background: #F0F0F0
+    padding: 3px
+
+  div.section-description
+    padding: 20px
+    background-color: #eee
+    h1, h2
+      margin-bottom: 10px
+      font-size: 18px
+      font-weight: bold
+    h2
+      margin-top: 30px
+
+  h1:not(:first-child)
+    margin-top: 30px
+
+  background-color: #fff
+  p
+    font-size: 14px
+    line-height: 22px
+  p + p
+    margin-top: 10px
+
+  div.code
+    background-color: #fff
+
+  pre
+    font-family: monospace
+    font-size: 14px
+    line-height: 22px
+
+  .method-groups
+    &:not(:first-child)
+      margin-top: 50px
+    h1
+      font-size: 28px
+      border-bottom: 1px solid #ccc
+      padding-bottom: 5px
+    h2, h3, h4, h5, h6
+      margin-top: 20px
+      font-weight: bold
+      font-size: 16px
+    ul
+      margin-top: 20px
+      margin-bottom: 20px
+    li
+      font-size: 14px
+      line-height: 20px
+    li + li
+      margin-top: 10px
+
+  .methods
+    h2
+      font-family: monospace
+      margin-top: 40px
+      margin-bottom: 10px
+      font-size: 20px
+      font-weight: normal
+      &:first-child
+        margin-top: 20px

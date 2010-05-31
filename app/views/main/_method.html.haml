@@ -1,0 +1,5 @@
+%li
+  - if @method == method.path
+    %strong= method.name
+  - else
+    = link_to(method.name, method)

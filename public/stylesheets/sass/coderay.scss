@@ -1,0 +1,71 @@
+@import "compass/css3/border-radius";
+
+.code_block {
+  position:relative; 
+  margin: 1em 0;
+  
+  h5 {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: #999;
+    background: white;
+    left: 0;
+    padding:0 10px; 
+    font-size:10px; 
+    text-transform:uppercase; 
+    font-weight:bold; 
+    z-index:9999;
+  }
+}
+
+div.code {
+  position:relative; 
+  margin:0; 
+  border:1px solid #e6e5e9; 
+  padding: 10px 15px;
+  @include border-radius(4px);
+  color:#232323; 
+  overflow:hidden;
+}
+
+code {
+  font-family: monospace;
+  padding: 3px;
+  background-color: #f0f0f0;
+}
+
+/* syntax coloring */
+.CodeRay .CodeRay {
+/*  background-color: #232323;*/
+  border: 1px solid black;
+  font-family: 'Courier New', 'Terminal', monospace;
+  color: #E6E0DB;
+  padding: 3px 5px;
+  overflow: auto;
+  font-size: 12px;
+  margin: 12px 0;
+
+}
+.CodeRay .CodeRay pre {
+  margin: 0px;
+  padding: 0px;
+}
+
+.CodeRay .an { color:#E7BE69 }                           /* html attribute */
+.CodeRay .c  { color:#BC9358; font-style: italic; }      /* comment */
+.CodeRay .ch { color:#509E4F }                           /* escaped character */
+.CodeRay .cl { color:#29547D }                           /* class */
+.CodeRay .co { color:#29547D }                           /* constant */
+.CodeRay .fl { color:#85A641 }                           /* float */
+.CodeRay .fu { color:#CA8F3B }                           /* function */
+.CodeRay .gv { color:#D0CFFE }                           /* global variable */
+.CodeRay .i  { color:#A4C260 }                           /* integer */
+.CodeRay .iv { color:#807AAE }                           /* instance variable */
+.CodeRay .pp { color:#E7BE69 }                           /* doctype */
+.CodeRay .r  { color:#CB7832 }                           /* keyword */
+.CodeRay .rx { color:#A4C260 }                           /* regex */
+.CodeRay .s  { color:#85A641 }                           /* string */
+.CodeRay .sy { color:#6C9CBD }                           /* symbol */
+.CodeRay .ta { color:#E7BE69 }                           /* html tag */
+.CodeRay .pc { color:#6C9CBD }                           /* boolean */

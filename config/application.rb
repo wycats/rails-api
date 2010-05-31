@@ -42,5 +42,7 @@ module RailsApi
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.rails_framework_root = File.expand_path("~/Code/rails")
   end
 end

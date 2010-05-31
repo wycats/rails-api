@@ -1,13 +1,25 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta3'
+path "vendor/rails" do
+  gem 'rails'
+  gem 'actionpack'
+  gem 'activesupport'
+  gem 'actionmailer'
+  gem 'activeresource'
+  gem 'activemodel'
+  gem 'railties'
+end
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'sqlite3-ruby'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+path "vendor/yard" do
+  gem 'yard',    '0.5.5.wycats'
+end
 
-gem 'yard'
+gem 'haml',    '~> 3.1.0'
+gem 'compass', '~> 0.11.alpha'
+gem 'coderay'
+gem 'bluecloth'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,0 +1,36 @@
+source 'http://rubygems.org'
+
+<%- if options.dev? -%>
+gem 'rails', :path => '<%= Rails::Generators::RAILS_DEV_PATH %>'
+gem 'arel',  :git => 'git://github.com/rails/arel.git'
+<%- elsif options.edge? -%>
+gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'arel',  :git => 'git://github.com/rails/arel.git'
+<%- else -%>
+gem 'rails', '<%= Rails::VERSION::STRING %>'
+
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+<%- end -%>
+
+<% unless options[:skip_activerecord] -%>
+gem '<%= gem_for_database %>'<% if require_for_database %>, :require => '<%= require_for_database %>'<% end %>
+<% end -%>
+
+# Use unicorn as the web server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# Bundle the extra gems:
+# gem 'bj'
+# gem 'nokogiri', '1.4.1'
+# gem 'sqlite3-ruby', :require => 'sqlite3'
+# gem 'aws-s3', :require => 'aws/s3'
+
+# Bundle gems for certain environments:
+# gem 'rspec', :group => :test
+# group :test do
+#   gem 'webrat'
+# end
