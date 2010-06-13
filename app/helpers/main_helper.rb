@@ -10,17 +10,17 @@ module MainHelper
   def overview
     {"ActionController::Base" =>
       {
-        "Layouts"                     =>  "Layouts",
-        "View Helpers"                =>  "Helpers",
-        "Basic Authentication"        =>  "HttpAuthentication::Basic",
-        "Token Authentication"        =>  "HttpAuthentication::Token",
-        "CSRF Mitigation"             =>  "RequestForgeryProtection",
-        "respond_to and respond_with" =>  "MimeResponds",
-        "Caching"                     =>  "Caching",
-        "Action Caching"              =>  "Caching::Actions",
-        "Fragment Caching"            =>  "Caching::Fragments",
-        "Page Caching"                =>  "Caching::Pages",
-        "Cache Sweeping"              =>  "Caching::Sweeping"
+        "Layouts"                     =>  "AbstractController::Layouts",
+        "View Helpers"                =>  "ActionController::Helpers",
+        "Basic Authentication"        =>  "ActionController::HttpAuthentication::Basic",
+        "Token Authentication"        =>  "ActionController::HttpAuthentication::Token",
+        "CSRF Mitigation"             =>  "ActionController::RequestForgeryProtection",
+        "respond_to and respond_with" =>  "ActionController::MimeResponds",
+        "Caching"                     =>  "ActionController::Caching",
+        "Action Caching"              =>  "ActionController::Caching::Actions",
+        "Fragment Caching"            =>  "ActionController::Caching::Fragments",
+        "Page Caching"                =>  "ActionController::Caching::Pages",
+        "Cache Sweeping"              =>  "ActionController::Caching::Sweeping"
       }
     }
   end
@@ -32,7 +32,7 @@ module MainHelper
       default ? "#{name}=#{default}" : name
     end.join(", ")
 
-    "## #{meth.name}(#{params})\n\n#{param_meth.docstring}\n".html_safe
+    "<h2 id='#{meth.name}'>#{meth.name}(#{params})</h2>\n\n#{param_meth.docstring}\n".html_safe
   end
 
   def class_list

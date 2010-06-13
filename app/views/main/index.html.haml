@@ -33,7 +33,7 @@
     %h1 Overview
     %ul
       - overview["ActionController::Base"].each do |title, klass|
-        %li= title
+        %li= link_to title, method_path(klass) + params[:suffix].to_s
 
   #class-level.method-list
     %h1 Class Level

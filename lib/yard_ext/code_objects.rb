@@ -23,7 +23,7 @@ module YARD::CodeObjects
     end
 
     def to_param
-      path
+      parent.path.gsub(/::ClassMethods$/, '')
     end
   end
 end

@@ -5,8 +5,9 @@ class MainController < ApplicationController
     @instance_methods   = klass.public_methods(:instance)
 
     if params[:name]
-      @method           = params[:name]
-      name              = YARD::Registry.at(params[:name]).parent.path.gsub(/::ClassMethods$/, '')
+      @method           = YARD::Registry.at(params[:name])
+
+      name              = @method.path.gsub(/::ClassMethods$/, "")
       @module           = RailsDocs::Namespace.new(YARD::Registry.at(name))
       @current_class    = current_methods(@class_methods).presence
       @current_instance = current_methods(@instance_methods).presence
@@ -17,7 +18,7 @@ private
 
   def current_methods(list)
     methods = if @module
-      list.select do |m| 
+      list.select do |m|
         m.parent.path =~ /#{@module.yard_object}(::ClassMethods)?/
       end
     else

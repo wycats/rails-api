@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 path "vendor/rails" do
-  gem 'rails'
+  # gem 'rails'
   gem 'actionpack'
   gem 'activesupport'
   gem 'actionmailer'

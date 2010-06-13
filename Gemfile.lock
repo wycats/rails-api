@@ -1,21 +1,53 @@
+PATH
+  remote: vendor/rails
+  specs:
+    actionmailer (3.0.0.beta3)
+      actionpack (= 3.0.0.beta3)
+      mail (~> 2.2.1)
+      text-format (~> 1.0.0)
+    actionpack (3.0.0.beta3)
+      activemodel (= 3.0.0.beta3)
+      activesupport (= 3.0.0.beta3)
+      erubis (~> 2.6.5)
+      rack (~> 1.1.0)
+      rack-mount (~> 0.6.3)
+      rack-test (~> 0.5.0)
+    activemodel (3.0.0.beta3)
+      activesupport (= 3.0.0.beta3)
+    activeresource (3.0.0.beta3)
+      activemodel (= 3.0.0.beta3)
+      activesupport (= 3.0.0.beta3)
+    activesupport (3.0.0.beta3)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.0)
+      memcache-client (>= 1.7.5)
+      tzinfo (~> 0.3.16)
+    railties (3.0.0.beta3)
+      actionpack (= 3.0.0.beta3)
+      activesupport (= 3.0.0.beta3)
+      rake (>= 0.8.3)
+      thor (~> 0.13.6)
+
+PATH
+  remote: vendor/yard
+  specs:
+    yard (0.5.5.wycats)
+
 GEM
   remote: http://rubygems.org/
   specs:
     abstract (1.0.0)
-    arel (0.3.3)
-      activesupport (>= 3.0.0.beta)
     bluecloth (2.0.7)
     builder (2.1.2)
-    bundler (0.10.pre)
     coderay (0.9.3)
     compass (0.11.alpha.0.845b790)
       haml (>= 3.0.4)
     erubis (2.6.5)
       abstract (>= 1.0.0)
     haml (3.1.0)
-    i18n (0.4.0)
-    mail (2.2.1)
-      activesupport (>= 2.3.4)
+    i18n (0.4.1)
+    mail (2.2.3)
+      activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
     memcache-client (1.8.3)
@@ -31,56 +63,12 @@ GEM
       text-hyphen (~> 1.0.0)
     text-hyphen (1.0.0)
     thor (0.13.6)
-    treetop (1.4.7)
+    treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.22)
 
-PATH
-  remote: /Users/wycats/Code/rails
-  specs:
-    actionmailer (3.0.0.beta3)
-      actionpack (= 3.0.0.beta3)
-      mail (~> 2.2.1)
-      text-format (~> 1.0.0)
-    actionpack (3.0.0.beta3)
-      activemodel (= 3.0.0.beta3)
-      activesupport (= 3.0.0.beta3)
-      erubis (~> 2.6.5)
-      rack (~> 1.1.0)
-      rack-mount (~> 0.6.3)
-      rack-test (~> 0.5.0)
-    activemodel (3.0.0.beta3)
-      activesupport (= 3.0.0.beta3)
-    activerecord (3.0.0.beta3)
-      activemodel (= 3.0.0.beta3)
-      activesupport (= 3.0.0.beta3)
-      arel (~> 0.3.3)
-    activeresource (3.0.0.beta3)
-      activemodel (= 3.0.0.beta3)
-      activesupport (= 3.0.0.beta3)
-    activesupport (3.0.0.beta3)
-      builder (~> 2.1.2)
-      i18n (~> 0.4.0)
-      memcache-client (>= 1.7.5)
-      tzinfo (~> 0.3.16)
-    rails (3.0.0.beta3)
-      actionmailer (= 3.0.0.beta3)
-      actionpack (= 3.0.0.beta3)
-      activerecord (= 3.0.0.beta3)
-      activeresource (= 3.0.0.beta3)
-      activesupport (= 3.0.0.beta3)
-      bundler (>= 0.9.19)
-      railties (= 3.0.0.beta3)
-    railties (3.0.0.beta3)
-      actionpack (= 3.0.0.beta3)
-      activesupport (= 3.0.0.beta3)
-      rake (>= 0.8.3)
-      thor (~> 0.13.6)
-
-PATH
-  remote: /Users/wycats/Code/cool_stuff/yard
-  specs:
-    yard (0.5.5.wycats)
+PLATFORMS
+  ruby
 
 DEPENDENCIES
   actionmailer!
@@ -92,7 +80,6 @@ DEPENDENCIES
   coderay
   compass (~> 0.11.alpha)
   haml (~> 3.1.0)
-  rails!
   railties!
   sqlite3-ruby
   yard (= 0.5.5.wycats)!
