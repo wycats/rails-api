@@ -1,8 +1,0 @@
-<% if @module && !@module.yard_object.docstring.empty? %>
-<div class="section-description">
-<h1><%= @module.title %></h1>
-
-<%= preserve code_markdown(@module.yard_object.docstring.html_safe) %>
-
-</div>
-<% end %>

@@ -1,5 +1,0 @@
-%li
-  - if @method == method.path
-    %strong= method.name
-  - else
-    = link_to(method.name, method_path(method) + params[:suffix].to_s + "##{method.name}", "data-name" => method.name)

@@ -1,0 +1,17 @@
+/* line 24, /Users/wycats/Code/rails-api/public/stylesheets/sass/application.sass */
+#page {
+  height: 1000px;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-align: top;
+  -moz-box-align: top;
+}
+
+/* line 28, /Users/wycats/Code/rails-api/public/stylesheets/sass/application.sass */
+#tree {
+  width: 200px;
+  height: 100%;
+  background-color: #66ff66;
+}

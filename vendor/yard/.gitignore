@@ -1,8 +1,0 @@
-_Yardoc
-.DS_Store
-*.pdf
-.yardoc
-*.gem
-/pkg
-/doc
-/coverage
